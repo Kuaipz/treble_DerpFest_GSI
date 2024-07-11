@@ -1,35 +1,35 @@
 #!/bin/bash
 
-echo
-echo "--------------------------------------"
-echo "        DerpFest AOSP 14.0 Build    "
-echo "                 by                   "
-echo "                KoysX               "
-echo "        Origin author: ponces  "
-echo "--------------------------------------"
-echo
+回声
+回声"--------------------------------------"
+回声"德普菲斯特AOSP 14.0版本"
+回声"由"
+回声“KoysX”
+回声【出处作者:庞塞】
+回声"--------------------------------------"
+回声
 
-set -e
+设置 -e
 
-BL=$PWD/treble_DerpFest_GSI
-BD=$PWD/treble_DerpFest_GSI/GSI
+法学学士=$PWD/treble_DerpFest_GSI
+神学士=$PWD/treble_DerpFest_GSI/GSI
 
 initRepos() {
-    if [ ! -d .repo ]; then
-        echo "--> Initializing workspace"
-        repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --depth=1
-        echo
+    如果 [ ! -d。回购]；然后
+回声"->正在初始化工作区"
+回购初始化-你https://github.com/DerpFest-AOSP/manifest.git-乙 -深度=1
+回声
 
-        echo "--> Preparing local manifest"
-        mkdir -p .repo/local_manifests
+回声"->正在准备本地清单"
+mkdir-p .回购/本地_清单
         cp $BL/manifest.xml .repo/local_manifests/aosp.xml
         echo
-    fi
+    船方不负担装货费用
 }
 
 syncRepos() {
     echo "--> Syncing repos"
-    repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j8
+    repo sync -力量-同步 -优化去拿 -没有-标签 -没有克隆-捆绑 -李子 -j5
     echo
 }
 
